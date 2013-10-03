@@ -1,0 +1,85 @@
+html,
+body {
+    width:100%;
+    height:100%;
+    background-image:url('images/bg.png');
+    font:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size:5.5em;
+    font-weight:bold;
+    text-align:center;
+    color:#b3b3b3;
+    color:rgba(255, 255, 255, 0.3);
+    text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+}
+
+#todo_content {
+    width:50%;
+    height:16%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    border-top:15px solid #5E2612;
+    background-color:#ffffff;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
+				0 25px 50px 0 rgba(0, 0, 0, 0.15) 
+}
+
+.todo_item {
+    width:100%  
+}
+
+#info {
+    width:45%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    color:#b3b3b3;
+    font-size:1em;
+    line-height:12px;
+}
+
+.checkbox, .todotext {
+    width:100%;  
+    height:100%;
+    display:block;
+    float:left;
+    margin:0px;
+}
+
+.checkbox {
+    width:8%;
+    height:100%;
+    font-size: 2em;
+}
+
+.checkbox:after {
+    content:'✔';
+    color:#b3b3b3;
+    padding:9px;
+}
+
+.todo_text {
+    width:87%;
+    height:100%;
+    display:block;
+    float:right;
+    font-size:1.75em;
+    color:#b3b3b3;
+    padding:10px;
+    border-left:6px double pink;
+    border-bottom:1px solid #B2DFEE;
+}
+
+.footer {
+    width:34%;
+    height:4%;
+    z-index:1;
+    color: #8d8d8d;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
+				0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
