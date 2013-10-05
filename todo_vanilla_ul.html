@@ -3,19 +3,17 @@
     <head>
         <title>TodoMVC</title>
         <link rel='stylesheet' href='todo_vanilla_ul.css' type='text/css'>
-        <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
-        <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.css" />
+<!--    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.css" /> -->
+        
     </head>
 <body>
     <h1>todos</h1>
         <div id='todo_content'>
-            <div class='todo_item' id='item1'>
-                <div id'select_all' class='checkbox'>
-            </div>
-                <form class="form-inline" role="form">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="new_list_item" placeholder="What needs to get done">
-                </div> 
+            <div class='enter_todo'>
+                <form id = 'todo_form' action = './todo_vanilla_ul.html' method ='POST'>
+                    <input id ='todo_description' name ='todo_description' size ='75' type ='text' placeholder = " Add to do item here" />
+                    <input id ='add_todo' type ='submit' value ='add' />
                 </form>
             </div>
          </div>
@@ -33,5 +31,8 @@
 </body>
 </html>
 
-
-               
+ 
+           
+           
+ 
+           
