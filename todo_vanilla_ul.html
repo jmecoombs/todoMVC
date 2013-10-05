@@ -3,15 +3,20 @@
     <head>
         <title>TodoMVC</title>
         <link rel='stylesheet' href='todo_vanilla_ul.css' type='text/css'>
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.css" />
     </head>
 <body>
     <h1>todos</h1>
         <div id='todo_content'>
             <div class='todo_item' id='item1'>
-                <div id'select_all' class='checkbox'></div>
-                <div id'item1_content' class='todo_text'>What needs to be done?</div>
-                <div id'item2_content' class='todo_text'>Learn HTML</div>
-                <div id'item2_content' class='todo_text'>Learn CSS</div>         
+                <div id'select_all' class='checkbox'>
+            </div>
+                <form class="form-inline" role="form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="new_list_item" placeholder="What needs to get done">
+                </div> 
+                </form>
             </div>
          </div>
         <div class='footer' id'filters'> </div>
@@ -20,6 +25,13 @@
                 <p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a></p>
                 <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
         </div>
+    
+    <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="./functions.js"></script>
 
 </body>
 </html>
+
+
+               
