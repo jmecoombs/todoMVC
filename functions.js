@@ -1,37 +1,47 @@
-/*
- * var listItems = function (text) {
- var result = [];
-    for(var index = 0; index < text.length; index++) {
+/* CLASS NOTES*/
 
-        var = newData =
-        var completed = '';
-        var checked = '';
-        
+var app = {
+  init: function() {
+    $('.new-todo').keypress(app.addNewItem);
+    $('.todo-list').on('click', '.toggle', app.toggleStatus);
+    $('.show-all').click(app.showAll);
+    $('.show-active').click(app.showActive);
+    $('.show-complete').click(app.showComplete);
+  },
+  addNewItem: function(ev) {
+    // when keypress is enter
+    if(ev.which === 13) {
+      // get the new todo label
+      var label = $('.new-todo').val();
+      // create new todo item and append
+      var newItem = $('.templates .todo-item').clone();
+      // update the label
+      newItem.find('label').text(label)
+      // append to list
+      newItem.appendTo('.todo-list');
+      // reset todo input
+      $('.new-todo').val('');
+      // update remaining
+      app.updateRemaining();
     }
-    document.write('<li>' + text[i] + '</li>');
-    return result;
+  }, 
+  toggleStatus: function(ev) {
+    $(ev.target).closest('.todo-item').toggleClass('complete');
+    app.updateRemaining();
+  },
+  updateRemaining: function() {
+    var remaining = $('.todo-list .todo-item').not('.complete');
+    $('.remaining').text(remaining.length + ' remaining');
+  },
+  showAll: function() {
+    $('.todo-item').show();
+  },
+  showActive: function() {
+    $('.todo-item').not('.complete').show();
+    $('.todo-item.complete').hide();
+  },
+  showComplete: function() {
+    $('.todo-item').not('.complete').hide();
+    $('.todo-item.complete').show();
+  }
 }
-*/ 
-
-$(document).ready(function() {
- 
-    $('#add_todo').click( function() {
-        var todoDescription = $('#todo_description').val();
-        $('.todo_list').prepend('<div class='todo'>'
-                    + '<div>'
-                        + '<input class='check_todo' name='check_todo' type='checkbox' />'
-                    +'</div>'
-                    +'<div class='todo_description'>'
-                        + todoDescription
-                    + '</div>'
-                + '</div>);
-        $('#todo_form')[0].reset();
-});
-                         
-$('.check_todo').unbind('click');
-$('.check_todo').click( function() {
-    var todo = $(this).parent().parent();
-    todo.toggleClass('checked');
-});   
-    
-return false;
