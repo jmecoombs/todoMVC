@@ -3,32 +3,50 @@
     <head>
         <title>TodoMVC</title>
         <link rel='stylesheet' href='todo_vanilla_ul.css' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
 <!--    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.css" /> -->
         
     </head>
 <body>
-    <h1>todos</h1>
-        <div id='todo_content'>
-            <div class='enter_todo'>
-                <form id = 'todo_form' action = './todo_vanilla_ul.html' method ='POST'>
-                    <input id ='todo_description' name ='todo_description' size ='75' type ='text' placeholder = " Add to do item here" />
-                    <input id ='add_todo' type ='submit' value ='add' />
-                </form>
-            </div>
-         </div>
-        <div class='footer' id'filters'> </div>
-        <div id='info'>
+    <h1>ToDos</h1>
+    <div class="todo_content">
+      <input class="new-todo wide" type="text" placeholder="Stuff to do...">
+      <div class="todo-list">
+      </div>
+      <div class="remaining">0 remaining</div>
+      <div>
+        <a href="#" class="show-all">All</a>
+        <a href="#" class="show-active">Active</a>
+        <a href="#" class="show-complete">Complete</a>
+      </div>
+    
+      <div class="templates hide">
+        Templates!
+        <div class="todo-item wide">
+          <span class="toggle">&gt;</span>
+          <label>The thing to do</label>
+        </div>
+      </div>
+        
+    </div>
+
+        <div class='footer'> </div>
+        <div class='info'>
                 <p>Double-click to edit a todo</p>
-                <p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a></p>
+                <p>Created by <a href="">Jamie Coombs</a></p>
                 <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
         </div>
     
     <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
-    <script src="./bootstrap/js/bootstrap.js"></script>
-    <script src="./functions.js"></script>
-
-</body>
+ <!--   <script src="./bootstrap/js/bootstrap.js"></script> -->
+    <script src="functions.js"></script>
+        <script>
+        $(document).ready(function() {
+        app.init();
+        })
+        </script>
+    </body>
 </html>
 
  
